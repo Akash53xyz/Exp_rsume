@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exact Resume Template</title>
+<link rel="stylesheet" href="styless.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  
+
+<div class="container">
+  <!-- ===== FORM ===== -->
+  <div class="form">
+    <h2>Fill Details</h2>
+
+    <input id="name" placeholder="Full Name">
+    <input id="address" placeholder="Address">
+    <input id="phone" placeholder="Phone">
+    <input id="email" placeholder="Email">
+    <input id="linkedin" placeholder="LinkedIn">
+    <textarea id="summary" placeholder="Professional Summary"></textarea>
+    <textarea id="experience" placeholder="Work Experience"></textarea>
+    <textarea id="education" placeholder="Education"></textarea>
+    <textarea id="skills" placeholder="Additional Skills (comma separated)"></textarea>
+    <textarea id="languages" placeholder="Languages"></textarea>
+    <textarea id="hobby" placeholder="Hobby"></textarea>
+
+    <button onclick="generate()">Preview</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <!-- ===== RESUME ===== -->
+  <div id="resume" class="resume">
+
+    <!-- LEFT PANEL -->
+    <div class="left">
+      <div class="photo">
+  <img id="profilePhoto" src="" alt="Photo">
+</div>
+
+<input type="file" id="photoInput" accept="image/*">
+      </div>
+
+      <h1 id="rname">YOUR NAME</h1>
+
+      <div class="section">
+        <h3>Contact</h3>
+        <p id="raddress"></p>
+        <p id="rphone"></p>
+        <p id="remail"></p>
+        <p id="rlinkedin"></p>
+      </div>
+
+      <div class="section">
+        <h3>Additional Skills</h3>
+        <ul id="rskills"></ul>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+      <h2>Professional Summary</h2>
+      <p id="rsummary"></p>
+
+      <h2>Work Experience</h2>
+      <p id="rexperience"></p>
+
+      <h2>Education</h2>
+      <p id="reducation"></p>
+
+      <h2>Languages</h2>
+      <p id="rlanguages"></p>
+
+      <h2>Hobby</h2>
+      <p id="rhobby"></p>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

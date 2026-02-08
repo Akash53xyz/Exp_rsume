@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Photo</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 30px;
+            font-family: Arial;
+        }
+
+        img {
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Selected Photo</h2>
+
+<img id="photo">
+
+<br>
+<a href="templates.html">⬅ Back to templates </a>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const imgName = params.get("img");
+
+    document.getElementById("photo").src = "images/" + imgName;
+</script>
+  <br>
+   <a href="resume1.html" class="btn">Create Resume</a>
+   
+ 
+</body>
+</html>
